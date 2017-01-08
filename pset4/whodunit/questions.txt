@@ -1,0 +1,51 @@
+1. What’s stdint.h?
+        stdint.h is a header file containing typedefs and macros that declares specified integer types as having a certain width.
+	        
+
+2. What’s the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program?
+    	This gives you the oppurtunity to set aside a certain amount of memory for an int, instead of the normal 4
+    bytes default given in the program.
+
+
+3. How many bytes is a BYTE, a DWORD, a LONG, and a WORD, respectively?
+        BYTE    => 1 byte
+        DWORD   => 4 bytes
+        LONG    => 4 bytes
+        WORD    => 2 bytes
+    
+
+4. What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats (with high probability) are generally called "magic numbers."
+        Hex:    0x424d
+        ASCII:  BM (bitmap!)
+
+
+5. What’s the difference between bfSize and biSize?
+        bfSize is the total number of bytes in the file.
+        biSize is the total number of bytes in the info header.
+    
+
+6. What does it mean if biHeight is negative?
+        If biHeight is negative, the bitmap is a top-down DIB (device-independent bitmap) and its origin is the upper left corner.
+	
+
+7. Why might fopen return NULL in lines 24 and 32 of copy.c?
+        a. fopen will return NULL if the file does not exist.
+        b. fopen will return NULL if it cannot create the outfile to write to.
+        c. fopen will return NULL If it can't find the file.
+
+
+8. Why is the third argument to fread always 1 in our code?
+        because we are reading the file one char at time
+
+
+9. What value does line 65 of copy.c assign to padding if bi.biWidth is 3?
+        3 ( i just var_dumped() the variable in a compiler :) 
+
+
+10. What does fseek do?
+        It moves to a specific location in a file by the amount to specify from you current position.
+
+
+11. What is SEEK_CUR?
+        This is an integer constant specifies your current position in the file.
+

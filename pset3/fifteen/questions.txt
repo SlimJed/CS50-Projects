@@ -1,0 +1,12 @@
+0. 3x3,4x3,5x3,3x4,5x4,6x4,3x5,4x5,5x5,6x5,3x6,4x6,5x6,6x6,
+
+1. The game board is represented with a Multi Dimensional Array.
+
+2. The greet(); function is called to greet the player at game start.
+
+3. The functions {
+    void init(void);
+    void draw(void);
+    bool move(int tile);
+    bool won(void); 
+    } Need to be implemented by me.
